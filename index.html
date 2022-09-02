@@ -6,20 +6,46 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1><strong><a href="index.html">김우진</a></strong></h1>
+<h1><strong><a href="index.html">Woojin Kim</a></strong></h1>
 
   <nav>
     <ul>
-      <li><a href="1.html">그는 누구인가?</a></li>
-      <li><a href="2.html">취미</a></li>
-      <li><a href="3.html">연락처</a></li>
+      <li><a href="1.html">About Myself</a></li>
+      <li><a href="2.html">Hobby</a></li>
+      <li><a href="4.html">MBTI</a></li>
+      <li><a href="3.html">Contact</a></li>
     </ul>
   <nav>
+
+    <label id="lblGreetings"></label>
+
 
 <br>
   <img src="https://user-images.githubusercontent.com/111094669/184480254-c37c07c2-9806-4ea5-bce2-412a6402cb28.JPG" width="450 pixel">
   <img src="https://user-images.githubusercontent.com/111094669/184480251-4ddaa7b7-6de0-4aaf-8466-d3973d5aaffc.JPG" width="450 pixel">
 </br>
+
+<script>
+  function sayHi(){
+    console.log('Hi')
+  }
+  sayHi()
+  let myDate = new Date();
+    let hrs = myDate.getHours();
+
+    let greet;
+
+    if (hrs < 12)
+        greet = 'Good Morning';
+    else if (hrs >= 12 && hrs <= 17)
+        greet = 'Good Afternoon';
+    else if (hrs >= 17 && hrs <= 24)
+        greet = 'Good Evening';
+
+
+    document.getElementById('lblGreetings').innerHTML =
+        '<b>' + greet + '</b> and welcome to my page!';
+</script>
 
 </body>
 </html>

@@ -39,3 +39,9 @@ p {
   word-spacing: 5px;
   line-height: 40px;
 }
+
+label {
+  font-size: 25px;
+  word-spacing: 5px;
+  margin: 30px;
+}
