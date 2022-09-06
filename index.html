@@ -25,11 +25,18 @@
   <img src="https://user-images.githubusercontent.com/111094669/184480251-4ddaa7b7-6de0-4aaf-8466-d3973d5aaffc.JPG" width="450 pixel">
 </br>
 
+<h3>Tell me your thoughts!</h3>
+<form action="/dogs" id="instaForm">
+  <input type="text" name="username" placeholder="username" />
+  <input type="text" name="comment" placeholder="comment" />
+  <button>Post Comment</button>
+</form>
+
+<h4>Comments:</h4>
+<ul id="comments"></ul>
+
 <script>
-  function sayHi(){
-    console.log('Hi')
-  }
-  sayHi()
+
   let myDate = new Date();
     let hrs = myDate.getHours();
 
@@ -45,6 +52,26 @@
 
     document.getElementById('lblGreetings').innerHTML =
         '<b>' + greet + '</b> and welcome to my page!';
+
+        const instaForm = document.querySelector("#instaForm");
+const commentsContainer = document.querySelector("#comments");
+instaForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+  const usernameInput = instaForm.elements.username;
+  const commentInput = instaForm.elements.comment;
+  addComment(usernameInput.value, commentInput.value);
+  usernameInput.value = "";
+  commentInput.value = "";
+});
+
+const addComment = (username, comment) => {
+const newComment = document.createElement("li");
+const bTag = document.createElement("b");
+bTag.append(username);
+newComment.append(bTag);
+newComment.append(`- ${comment}`);
+commentsContainer.append(newComment);
+};
 </script>
 
 </body>
