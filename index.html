@@ -8,24 +8,27 @@
 <body>
 <h1><strong><a href="index.html">Woojin Kim</a></strong></h1>
 
+<div>
   <nav>
-    <ul>
-      <li><a href="1.html">About Myself</a></li>
-      <li><a href="2.html">Hobby</a></li>
-      <li><a href="4.html">MBTI</a></li>
-      <li><a href="3.html">Contact</a></li>
-    </ul>
-  <nav>
+      <a href="1.html">About Myself</a>
+      <a href="2.html">Hobby</a>
+      <a href="4.html">MBTI</a>
+      <a href="3.html">Contact</a>
+  </nav>
+<div>
 
-    <label id="lblGreetings"></label>
+    <label1 id="lblGreetings"></label1>
 
 
 <br>
+<div1>
   <img src="https://user-images.githubusercontent.com/111094669/184480254-c37c07c2-9806-4ea5-bce2-412a6402cb28.JPG" width="450 pixel">
   <img src="https://user-images.githubusercontent.com/111094669/184480251-4ddaa7b7-6de0-4aaf-8466-d3973d5aaffc.JPG" width="450 pixel">
+</div1>
 </br>
 
 <h3>Tell me your thoughts!</h3>
+<div2>
 <form action="/dogs" id="instaForm">
   <input type="text" name="username" placeholder="username" />
   <input type="text" name="comment" placeholder="comment" />
@@ -34,6 +37,7 @@
 
 <h4>Comments:</h4>
 <ul id="comments"></ul>
+</div2>
 
 <script>
 
@@ -51,7 +55,7 @@
 
 
     document.getElementById('lblGreetings').innerHTML =
-        '<b>' + greet + '</b> and welcome to my page!';
+        greet + ' and welcome to my page!';
 
         const instaForm = document.querySelector("#instaForm");
 const commentsContainer = document.querySelector("#comments");
